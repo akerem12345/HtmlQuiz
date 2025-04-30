@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="design.css"/>
+  <title>Ana Sayfa</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>"Hangi ODTÜ KKK Nesnesisin?" Testine Hoş Geldin</h1>
+    <hr />
+    <h2>Quizi çöz!</h2>
+
+    <h3>1-Hangi Takımlısın?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru1" value="1" onchange="checkAllAnswered()"> FB</label>
+      <label><input type="radio" name="soru1" value="2" onchange="checkAllAnswered()"> GS</label>
+      <label><input type="radio" name="soru1" value="3" onchange="checkAllAnswered()"> BJK</label>
+      <label><input type="radio" name="soru1" value="4" onchange="checkAllAnswered()"> diğer</label>
+    </div>
+
+    <h3>2-Sokağa ne sıklıkla gidersin?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru2" value="1" onchange="checkAllAnswered()"> Hiç gitmedim</label>
+      <label><input type="radio" name="soru2" value="2" onchange="checkAllAnswered()"> Ayda bir giderim</label>
+      <label><input type="radio" name="soru2" value="3" onchange="checkAllAnswered()"> Hafta sonları gideriz</label>
+      <label><input type="radio" name="soru2" value="4" onchange="checkAllAnswered()"> Sokakta yaşıyorum</label>
+    </div>
+
+    <h3>3-Derslerine ne sıklıkla gidersin?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru3" value="1" onchange="checkAllAnswered()"> Götümde pamukla bile giderim</label>
+      <label><input type="radio" name="soru3" value="2" onchange="checkAllAnswered()"> Bir defa gitmemiştim, benden asi yok</label>
+      <label><input type="radio" name="soru3" value="3" onchange="checkAllAnswered()"> Dersten kalmayacak kadar gidiyorum</label>
+      <label><input type="radio" name="soru3" value="4" onchange="checkAllAnswered()"> NA oldum knk, nasıl anladın?</label>
+    </div>
+
+    <h3>4-Sana göre sadece aşağıdaki şıklardan hangisi en iyi yemeği yapıyor?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru4" value="1" onchange="checkAllAnswered()"> Yemekhane</label>
+      <label><input type="radio" name="soru4" value="2" onchange="checkAllAnswered()"> Ada Pizza</label>
+      <label><input type="radio" name="soru4" value="3" onchange="checkAllAnswered()"> Lavish</label>
+      <label><input type="radio" name="soru4" value="4" onchange="checkAllAnswered()"> Sedo</label>
+    </div>
+
+    <h3>5-En iyi yurdu sorsam?</h3>
+    <p><i>Ve hayır, bu sorunun cevabı Ebi 2 olamaz! Bunu sen de biliyorsun.</i></p>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru5" value="1" onchange="checkAllAnswered()"> 1. Yurt. +7 yıllık makineci ile oda paylaşıyorum Nereden bildin?</label>
+      <label><input type="radio" name="soru5" value="2" onchange="checkAllAnswered()"> 2. Yurt. Sega'da kahve içmeden ayılamam.</label>
+      <label><input type="radio" name="soru5" value="3" onchange="checkAllAnswered()"> 3. Yurt. Bütün yurdun Afrika esintisi kokmasına bayılıyorum.</label>
+      <label><input type="radio" name="soru5" value="4" onchange="checkAllAnswered()"> 4. Yurt. En azından mezun olduktan sonra Pakistan'da işim hazır.</label>
+    </div>
+
+    <h3>6-Kampüste yapılabilecek en güzel aktiviteyi sorsam?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru6" value="1" onchange="checkAllAnswered()"> Uyumak</label>
+      <label><input type="radio" name="soru6" value="2" onchange="checkAllAnswered()"> Kütüphanede sabahlamak. <i><small>(Ayn yrrm)</small></i></label>
+      <label><input type="radio" name="soru6" value="3" onchange="checkAllAnswered()"> Sega'da oturmak</label>
+      <label><input type="radio" name="soru6" value="4" onchange="checkAllAnswered()"> Kemal abi'de bira</label>
+    </div>
+
+    <h3>7-Herhangi bir topluluğa üye misin?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru7" value="1" onchange="checkAllAnswered()"> Moruk, yatcaz kalkçaz çalışıcaz</label>
+      <label><input type="radio" name="soru7" value="2" onchange="checkAllAnswered()"> Eskiden üyeydim ama ayrıldım.</label>
+      <label><input type="radio" name="soru7" value="3" onchange="checkAllAnswered()"> Üyeyim, arada etkinliklere katılırım.</label>
+      <label><input type="radio" name="soru7" value="4" onchange="checkAllAnswered()"> BEN TOPLULUK ADAMIM, OKULU BEN YÖNETİYORUM!</label>
+    </div>
+
+    <h3>8-Okuldaki Mat Hocası Tercihin?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru8" value="1" onchange="checkAllAnswered()"> Johannes / Georgie / Erhan hoca</label>
+      <label><input type="radio" name="soru8" value="2" onchange="checkAllAnswered()"> Roland / Emel / Satoşi hoca</label>
+      <label><input type="radio" name="soru8" value="3" onchange="checkAllAnswered()"> Sadık hoca</label>
+      <label><input type="radio" name="soru8" value="4" onchange="checkAllAnswered()"> Çağrı hoca</label>
+    </div>
+
+    <h3>9-Kampüste Çikolata Renkli Arkadaşın Var Mı?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru9" value="1" onchange="checkAllAnswered()"> Iyy, hiç olur mu? Biz 7 kuşak İstanbulluyuz.</label>
+      <label><input type="radio" name="soru9" value="2" onchange="checkAllAnswered()"> Hayır, hiç yok ama rahatsız olmam.</label>
+      <label><input type="radio" name="soru9" value="3" onchange="checkAllAnswered()"> Evet, çikolata hocamlarla aram çok iyi.</label>
+      <label><input type="radio" name="soru9" value="4" onchange="checkAllAnswered()"> Ben saat mi satıyorum?!</label>
+    </div>
+
+    <h3>10-Adadaki favori şehrin?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru10" value="1" onchange="checkAllAnswered()"> Girne</label>
+      <label><input type="radio" name="soru10" value="2" onchange="checkAllAnswered()"> Gazimağusa</label>
+      <label><input type="radio" name="soru10" value="3" onchange="checkAllAnswered()"> Lefkoşa</label>
+      <label><input type="radio" name="soru10" value="4" onchange="checkAllAnswered()"> Güzelyurt <small><i>(hazırlık tayfa ses ver?)</i></small> </label>
+    </div>
+
+    <h3>11-Okuldaki en mutlu anın?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru11" value="4" onchange="checkAllAnswered()"> Sınav haftan bitti ve yarın haftasonu. Akşam köydesin.</label>
+      <label><input type="radio" name="soru11" value="3" onchange="checkAllAnswered()"> T kantininde sıra yoktu.</label>
+      <label><input type="radio" name="soru11" value="2" onchange="checkAllAnswered()"> Hoca çıkmış sordu.</label>
+      <label><input type="radio" name="soru11" value="1" onchange="checkAllAnswered()"> Diğer</label>
+    </div>
+
+    <h3>12-Aşağıdaki bir hoca ile akşam yemeği yiyeceksin. Kim gelsin?</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru12" value="1" onchange="checkAllAnswered()"> Chad</label>
+      <label><input type="radio" name="soru12" value="2" onchange="checkAllAnswered()"> Murat hoca</label>
+      <label><input type="radio" name="soru12" value="3" onchange="checkAllAnswered()"> Nasire hoca</label>
+      <label><input type="radio" name="soru12" value="4" onchange="checkAllAnswered()"> Çağrı hoca</label>
+    </div>
+
+    <h3>13-"Annenle babanın çocuğu olup ama kardeşin olmayan kişi kimdir?"</h3>
+    <div class="questionContainer">
+      <label><input type="radio" name="soru13" value="1" onchange="checkAllAnswered()"> Ay bilemedim aşko</label>
+      <label><input type="radio" name="soru13" value="2" onchange="checkAllAnswered()"> Kuzenim</label>
+      <label><input type="radio" name="soru13" value="3" onchange="checkAllAnswered()"> Ben</label>
+      <label><input type="radio" name="soru13" value="4" onchange="checkAllAnswered()"> Aguero</label>
+    </div>
+
+    <button id="submitBtn" onclick="GetResult()" disabled>Sonuçları gör</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const radios = document.querySelectorAll('input[type="radio"]');
+      radios.forEach(radio => {
+        radio.addEventListener('change', checkAllAnswered);
+      });
+    });
+  </script>
+
+  <script src="jscript.js"></script>
+</body>
+</html>
